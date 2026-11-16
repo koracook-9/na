@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salesforce Case Review Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Operations</p>
+          <h1>Salesforce Case Review Dashboard</h1>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="panel upload-panel">
+          <h2>Upload Salesforce exports</h2>
+          <label class="upload-box" for="csvInput">
+            <input id="csvInput" type="file" accept=".csv,text/csv" multiple />
+            <span>Choose CSV files or drag them here</span>
+          </label>
+          <p class="helper-text">
+            Supported reports: Kora Stall Progressing, Reserve / Backlog, and Claude Integrations.
+          </p>
+        </section>
+
+        <section class="panel summary-panel">
+          <h2>Summary</h2>
+          <div id="summary" class="summary-grid">
+            <div class="summary-card empty-card">
+              <p class="label">Files analyzed</p>
+              <p class="value">0</p>
+            </div>
+            <div class="summary-card empty-card">
+              <p class="label">Flagged cases</p>
+              <p class="value">0</p>
+            </div>
+            <div class="summary-card empty-card">
+              <p class="label">Urgent items</p>
+              <p class="value">0</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel results-panel">
+          <h2>Flagged cases</h2>
+          <div id="results" class="results-container">
+            <p class="placeholder">No files uploaded yet.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
